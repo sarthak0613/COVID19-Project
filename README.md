@@ -74,6 +74,14 @@ Used SQL to derive insights and do major aggregtaions. Wrote SQL queries to show
 
 ![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/cbb8d588-a7a2-4681-8e01-4523700b5fbc)
 
+## --Some key Insights--
+
+- Maharashtra had the most number of confirmed cases.
+- Daman & Diu had the best recovery rate.
+- Ernakulum district of Kerala had the most number of delta confirmed cases.
+- Most number of testing was carried out in Uttar Pradesh.
+
+
 ## --Problems Faced--
 
 - Excessive amount of null values made it difficult for analysis, so we had to replace with zero, mean, etc.
