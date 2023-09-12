@@ -85,3 +85,5 @@ Used SQL to derive insights and do major aggregtaions. Wrote SQL queries to show
 ## --Problems Faced--
 
 - Excessive amount of null values made it difficult for analysis, so we had to replace with zero, mean, etc.
+- Ensuring the consistency and timeliness of COVID-19 data was a persistent challenge.
+- Mapping COVID-19 data to geographical regions within India presented challenges due to variations in naming conventions and administrative boundaries.
