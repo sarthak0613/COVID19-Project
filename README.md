@@ -33,26 +33,53 @@ with the help of pandas and other usefull library extract the data from above AP
 
 - In second method, directly extracted the data from API using JSON library and created small data frames and at the end joined them.
 
-![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/798b991f-fe98-4e34-9bba-7baaa1aebdf9)
+### Some code snippets-
 
+- The code snippet below creates a Pandas DataFrame from nested JSON data representing COVID-19 statistics for different states and dates.
+- It flattens and structures the data, then saves it to a CSV file.
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/e8b0c135-1c2a-49ed-999c-b21f80bbfb81)
 
-![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/e9e93d9e-4cee-47dd-85b7-4a799712c049)
+- The raw csv that was created looked something like this.
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/1f5e8bbe-a72e-46fe-bf82-5cc2415e1af3)
+
+- This code snippet retrieves a list of state names from the data dictionary and prints the list of states.
+
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/8d2892b7-54b1-4f2e-afe6-98e5fd93e03f)
+
+- The first line drops the column named "other" from the DataFrame data_min_delta7, fills any missing values (NaN) with zeros, and then saves the cleaned DataFrame to a CSV file named "data_min_delta7.csv" in the "cleaned_data" directory without including the index.
+- The second line performs the same operations as the first line but doesn't save the cleaned DataFrame to a file; it only displays the result in the output.
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/bd608d92-52d5-49a5-8ec2-3805398ca12d)
+
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/21706686-fe84-4a7c-ae33-9508a0b82901)
 
 
 ### CSV Creation-
 
 We stored the data extracted after cleaning it, we further did null handling in excel.
 
-
 ![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/57151bff-802c-493b-bbdb-c4f09c9cf4ce)
-
 
 ### SQL Aggregation-
 
 Used SQL to derive insights and do major aggregtaions. Wrote SQL queries to show some insights.
 
+- These SQL queries extract date-related information from the "data_min_districts" table, grouping data by year, month, and week, and calculating sums of COVID-19 statistics.
+- They serve to analyze and summarize the data by different time intervals.
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/76b6f760-3a05-4f43-91a8-c7bddae56945)
 
-![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/46519470-5e3e-483d-9ac8-b51c737a2ff1)
+- This SQL query creates a table Q2 by calculating the testing ratio and the total number of deceased cases for each state.
+- It assigns a category (A, B, C, D, or E) based on testing ratio(number of tests done / population) range, and the data is grouped by state.
+- Category A: 0.05 ≤ tr ≤ 0.1
+- Category B: 0.1 < tr ≤ 0.3
+- Category C: 0.3 < tr ≤ 0.5
+- Category D: 0.5 < tr ≤ 0.75
+- Category E: 0.75 < tr ≤ 1.0
+  
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/ed7343bf-2d71-40a9-b48e-9421560f9942)
+
+- This SQL query creates a table Q3_3 that summarizes data by districts.
+- It calculates the sum of delta confirmed cases and delta deceased cases for each district, orders the results in descending order of the sum of deceased cases, and limits the output to the top 10 districts.
+![image](https://github.com/sarthak0613/COVID19-Project/assets/135547703/4f22fe60-128c-4305-81fb-1ed9323d8761)
 
 
 ## --Insights--
